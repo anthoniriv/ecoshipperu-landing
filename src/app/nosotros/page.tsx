@@ -1,6 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import CTASection from '@/components/CTASection'
+import HeroSection from '@/components/HeroSection'
 
 const pillars = [
   {
@@ -10,7 +9,7 @@ const pillars = [
       </svg>
     ),
     title: 'Misión',
-    description: 'Simplificar el comercio internacional mediante servicios logísticos integrales que impulsen el crecimiento de nuestros clientes.',
+    description: 'Brindar un servicio integral y confiable en operaciones de comercio exterior, facilitando los procesos de importación, exportación y logística interna. Lo hacemos a través de una gestión transparente, justa y eficiente, una firme ética profesional, generando confianza y tranquilidad en cada cliente.',
   },
   {
     icon: (
@@ -20,7 +19,7 @@ const pillars = [
       </svg>
     ),
     title: 'Visión',
-    description: 'Ser el enlace logístico más confiable y eficiente de las Américas, reconocidos por nuestra innovación y calidad humana.',
+    description: 'Ser una agencia líder en servicios de comercio exterior, reconocida por nuestro compromiso con la transparencia, la honestidad y valores cristianos, ofreciendo soluciones ágiles y personalizadas que se adapten a las necesidades logísticas de cada cliente en un mundo globalizado.',
   },
   {
     icon: (
@@ -29,25 +28,65 @@ const pillars = [
       </svg>
     ),
     title: 'Objetivos',
-    description: 'Garantizar la seguridad jurídica y comercial de las operaciones de nuestros clientes, optimizando tiempos y costos logísticos.',
+    description: 'Garantizar la seguridad jurídica y comercial de las operaciones de nuestros clientes, optimizando tiempos y costos logísticos con una firme ética profesional.',
   },
 ]
 
 const values = [
   {
+    title: 'Principios Cristianos',
+    description: 'Actuamos con amor al prójimo, ética, integridad y responsabilidad en cada gestión.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+      </svg>
+    ),
+  },
+  {
     title: 'Transparencia',
-    description: 'Procesos claros y comunicación constante en cada etapa. Además de la solidaridad personal en sus operaciones.',
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop',
+    description: 'Generamos relaciones basadas en la confianza.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
   },
   {
     title: 'Honestidad',
-    description: 'Integridad total en costos, tiempos y gestiones. Comprometidos con ofrecer acuerdos favorables.',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop',
+    description: 'Nos comprometemos con la veracidad de nuestros servicios.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
   },
   {
-    title: 'Ética Profesional',
-    description: 'Cumplimiento estricto de normativas y estándares internacionales. Además hay y está el todo momento por el trabajador.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
+    title: 'Justicia',
+    description: 'Nos esforzamos por mantener relaciones comerciales justas, donde nuestros stakeholders se beneficien de manera equilibrada.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Compromiso con el Cliente',
+    description: 'Nos basamos en la empatía, ofreciendo atención cercana y soluciones personalizadas.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Confidencialidad',
+    description: 'Protegemos la información de nuestros clientes con absoluta discreción y responsabilidad.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+    ),
   },
 ]
 
@@ -55,47 +94,15 @@ export default function NosotrosPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gray-50 py-16 md:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
-              <span className="section-subtitle">SOBRE NOSOTROS</span>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                Compromiso Humano en Comercio Exterior
-              </h1>
-              <p className="text-gray-600 text-base md:text-lg mb-8 leading-relaxed">
-                Más que logística, somos su socio estratégico en cada paso del proceso aduanero. Descubra la experiencia humana detrás de su éxito comercial.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="#quienes-somos"
-                  className="bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors text-center"
-                >
-                  Conocer al Equipo
-                </Link>
-                <Link
-                  href="/contacto"
-                  className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors text-center"
-                >
-                  Nuestra Sede
-                </Link>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&h=600&fit=crop"
-                  alt="Equipo de trabajo profesional"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Compromiso Humano en Comercio Exterior"
+        description="Más que logística, somos su socio estratégico en cada paso del proceso aduanero. Descubra la experiencia humana detrás de su éxito comercial."
+        image="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1920&h=1080&fit=crop"
+        primaryButtonText="Conocer al Equipo"
+        primaryButtonHref="#quienes-somos"
+        secondaryButtonText="Contáctenos"
+        secondaryButtonHref="/contacto"
+      />
 
       {/* Who We Are Section */}
       <section id="quienes-somos" className="bg-white py-16 md:py-20 px-4">
@@ -113,7 +120,7 @@ export default function NosotrosPage() {
                 key={index}
                 className="bg-gray-50 p-6 md:p-8 rounded-xl border border-gray-100"
               >
-                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 mb-4">
+                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-500 mb-4">
                   {pillar.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -131,21 +138,18 @@ export default function NosotrosPage() {
       {/* Values Section */}
       <section id="valores" className="bg-gray-50 py-16 md:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12">
+          <div className="mb-12 text-center">
             <h2 className="section-title">Nuestros Valores Corporativos</h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              En el mundo del B2B, la reputación es nuestro activo más valioso. Trabajamos bajo estándares éticos inquebrantables.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((value, index) => (
-              <div key={index} className="group">
-                <div className="relative rounded-xl overflow-hidden mb-4">
-                  <Image
-                    src={value.image}
-                    alt={value.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center text-primary-500 mb-4">
+                  {value.icon}
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">{value.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{value.description}</p>

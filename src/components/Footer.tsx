@@ -11,7 +11,7 @@ const footerLinks = {
     { name: 'Quienes Somos', href: '/nosotros' },
     { name: 'Nuestros Valores', href: '/nosotros#valores' },
   ],
-  aplicaciones: [
+  porQueEcoship: [
     { name: 'Proceso Operativo', href: '/aplicaciones' },
   ],
 }
@@ -24,8 +24,8 @@ export default function Footer() {
           {/* Logo & Description */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <span className="text-xl font-bold">
-                <span className="text-primary-600">Eco</span>
+              <span className="text-2xl font-bold">
+                <span className="text-primary-500">Eco</span>
                 <span className="text-gray-900">ship</span>
               </span>
             </Link>
@@ -62,11 +62,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Aplicaciones */}
+          {/* ¿Por qué Ecoship? */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Aplicaciones</h3>
+            <h3 className="text-sm font-semibold text-gray-900 mb-4">¿Por qué Ecoship?</h3>
             <ul className="space-y-3">
-              {footerLinks.aplicaciones.map((link) => (
+              {footerLinks.porQueEcoship.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
                     {link.name}
