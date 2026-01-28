@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import CTASection from '@/components/CTASection'
+import HeroSlider from '@/components/HeroSlider'
 
 const whyChooseUs = [
   {
@@ -41,7 +42,7 @@ const services = [
       </svg>
     ),
     title: 'Agenciamiento de Carga',
-    description: 'Gestión integral de importación y exportación estándares y complementarias.',
+    description: 'Clasificación arancelaria precisa con partidas SENIAT, artes y términos.',
   },
   {
     icon: (
@@ -50,7 +51,7 @@ const services = [
       </svg>
     ),
     title: 'Agenciamiento de Aduana',
-    description: 'Clasificación arancelaria precisa con partidas SENIAT, artes y términos.',
+    description: 'Gestión integral de importación y exportación estándares y complementarias.',
   },
   {
     icon: (
@@ -59,7 +60,7 @@ const services = [
       </svg>
     ),
     title: 'Almacenaje',
-    description: 'Almacenes estratégicos, control de inventario y servicios de valor agregado.',
+    description: 'Trabajamos al lado de Dinet para los direccionamientos.',
   },
   {
     icon: (
@@ -68,7 +69,7 @@ const services = [
       </svg>
     ),
     title: 'Seguros',
-    description: 'Pólizas integral para carga y custodia con cobertura de accidente de trabajo.',
+    description: 'Pólizas integrales para carga y custodia con cobertura de accidente de trabajo.',
   },
   {
     icon: (
@@ -77,7 +78,7 @@ const services = [
       </svg>
     ),
     title: 'Trasegados',
-    description: 'Trasiego punto a punto establecido de seguridad de contenido y diferentes modelos.',
+    description: 'Contamos con 2 empresas asociadas con +5000 m² de espacio y experiencia en cargas dimensionadas en flat rack.',
   },
   {
     icon: (
@@ -121,85 +122,65 @@ const values = [
   {
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+      </svg>
+    ),
+    title: 'Principios Cristianos',
+    description: 'Actuamos con amor al prójimo, ética, integridad y responsabilidad en cada gestión.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+    title: 'Transparencia',
+    description: 'Generamos relaciones basadas en la confianza.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
     title: 'Honestidad',
+    description: 'Nos comprometemos con la veracidad de nuestros servicios.',
   },
   {
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
       </svg>
     ),
-    title: 'Precisión',
+    title: 'Justicia',
+    description: 'Mantenemos relaciones comerciales justas donde todos se benefician de manera equilibrada.',
   },
   {
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
       </svg>
     ),
-    title: 'Compromiso',
+    title: 'Compromiso con el Cliente',
+    description: 'Ofrecemos atención cercana y soluciones personalizadas basadas en la empatía.',
   },
   {
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
       </svg>
     ),
-    title: 'Excelencia',
+    title: 'Confidencialidad',
+    description: 'Protegemos la información de nuestros clientes con absoluta discreción y responsabilidad.',
   },
 ]
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-white py-12 md:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
-              <span className="inline-block bg-primary-50 text-primary-600 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                EXPERTOS EN B2B
-              </span>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                Su Aliado Estratégico en{' '}
-                <span className="text-primary-600">Comercio Exterior</span>
-              </h1>
-              <p className="text-gray-600 text-base md:text-lg mb-8 leading-relaxed">
-                Transformamos la complejidad del comercio internacional en soluciones transparentes y eficientes. Conectamos su empresa con mercados globales.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contacto"
-                  className="bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors text-center"
-                >
-                  Solicitar asesoría
-                </Link>
-                <Link
-                  href="/servicios"
-                  className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors text-center"
-                >
-                  Nuestros servicios
-                </Link>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&h=600&fit=crop"
-                  alt="Puerto comercial con contenedores"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Slider */}
+      <HeroSlider />
 
       {/* Why Choose Us Section */}
       <section className="bg-gray-50 py-16 md:py-20 px-4">
@@ -217,7 +198,7 @@ export default function HomePage() {
                 key={index}
                 className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center text-primary-600 mb-4">
+                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-500 mb-4">
                   {item.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -247,7 +228,7 @@ export default function HomePage() {
                 className="p-6 rounded-xl border border-gray-200 hover:border-primary-200 hover:shadow-md transition-all group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center text-primary-600 flex-shrink-0 group-hover:bg-primary-100 transition-colors">
+                  <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-500 flex-shrink-0 group-hover:bg-primary-100 transition-colors">
                     {service.icon}
                   </div>
                   <div>
@@ -287,7 +268,7 @@ export default function HomePage() {
                     height={300}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 left-4 bg-primary-600 text-white text-xs font-bold px-2 py-1 rounded">
+                  <div className="absolute top-4 left-4 bg-primary-500 text-white text-xs font-bold px-2 py-1 rounded">
                     PASO {step.number}
                   </div>
                 </div>
@@ -308,13 +289,14 @@ export default function HomePage() {
             En el mundo del B2B, la reputación es nuestro activo más valioso. Trabajamos bajo estándares éticos inquebrantables.
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((value, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center text-primary-600 mb-4">
+              <div key={index} className="flex flex-col items-center p-6 bg-gray-50 rounded-xl">
+                <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center text-primary-500 mb-4">
                   {value.icon}
                 </div>
-                <h3 className="font-semibold text-gray-900">{value.title}</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">{value.title}</h3>
+                <p className="text-sm text-gray-600 text-center">{value.description}</p>
               </div>
             ))}
           </div>

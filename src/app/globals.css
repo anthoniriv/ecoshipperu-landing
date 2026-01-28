@@ -14,7 +14,7 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200;
+    @apply bg-primary-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-600 transition-colors duration-200;
   }
 
   .btn-secondary {
@@ -26,6 +26,20 @@ body {
   }
 
   .section-subtitle {
-    @apply text-sm font-semibold text-primary-600 uppercase tracking-wider mb-2;
+    @apply text-sm font-semibold text-primary-500 uppercase tracking-wider mb-2;
   }
+}
+
+/* Hero Slider Zoom Animation */
+@keyframes slow-zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 8s ease-out forwards;
 }

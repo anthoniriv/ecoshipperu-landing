@@ -1,6 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import CTASection from '@/components/CTASection'
+import HeroSection from '@/components/HeroSection'
 
 const processSteps = [
   {
@@ -67,32 +66,15 @@ export default function AplicacionesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=1600&h=800&fit=crop"
-            alt="Cielo con nubes"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary-900/80 to-primary-800/90" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Metodología de Clase Mundial en Logística
-          </h1>
-          <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
-            Desde el análisis inicial hasta la entrega final, transformamos la complejidad del comercio exterior en un proceso transparente, eficiente y totalmente monitoreado.
-          </p>
-          <Link
-            href="#proceso"
-            className="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors"
-          >
-            Explorar Proceso
-          </Link>
-        </div>
-      </section>
+      <HeroSection
+        title="¿Por qué Ecoship?"
+        description="Desde el análisis inicial hasta la entrega final, transformamos la complejidad del comercio exterior en un proceso transparente, eficiente y totalmente monitoreado."
+        image="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=1920&h=1080&fit=crop"
+        primaryButtonText="Explorar Proceso"
+        primaryButtonHref="#proceso"
+        secondaryButtonText="Contáctenos"
+        secondaryButtonHref="/contacto"
+      />
 
       {/* Process Section */}
       <section id="proceso" className="bg-white py-16 md:py-20 px-4">
@@ -115,7 +97,7 @@ export default function AplicacionesPage() {
                 <div key={index} className="relative flex gap-6 md:gap-8">
                   {/* Icon Circle */}
                   <div className="relative z-10 flex-shrink-0">
-                    <div className="w-12 h-12 md:w-16 md:h-16 bg-primary-600 rounded-full flex items-center justify-center text-white">
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-primary-500 rounded-full flex items-center justify-center text-white">
                       {step.icon}
                     </div>
                   </div>
@@ -123,7 +105,7 @@ export default function AplicacionesPage() {
                   {/* Content */}
                   <div className="flex-1 pb-8">
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="text-xs font-bold text-primary-600 bg-primary-50 px-2 py-1 rounded">
+                      <span className="text-xs font-bold text-primary-500 bg-primary-100 px-2 py-1 rounded">
                         PASO {step.number}
                       </span>
                       <h3 className="font-semibold text-gray-900">{step.title}</h3>
